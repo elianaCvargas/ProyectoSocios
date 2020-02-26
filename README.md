@@ -13,4 +13,6 @@ Lectura única de archivo con extención .csv
 Realizar carga de archivo socios con el formato especificado para habilitar navegación de respuestas.
 Manejo de solapas para mejor visualización de puntos requeridos.
 
+Nota adicional:
 
+Al no contar con licencia del Visual Studio utilizo la que tiene Rodrigo.
