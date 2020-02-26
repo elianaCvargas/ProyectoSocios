@@ -9,4 +9,8 @@ Requerimientos:
 - Navegador: Chrome
 
 Observaciones: 
-Lectura única de archivo con extención .svc
+Lectura única de archivo con extención .csv
+Realizar carga de archivo socios con el formato especificado para habilitar navegación de respuestas.
+Manejo de solapas para mejor visualización de puntos requeridos.
+
+
