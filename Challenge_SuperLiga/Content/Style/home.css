@@ -1,0 +1,293 @@
+﻿footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: white;
+	color: black;
+	text-align: center;
+}
+
+.transfer {
+	background: #ffffff;
+	border-radius: 10px;
+	box-shadow: 0 0 12px 0 rgba(0,0,0,0.1), 0 10px 30px 0 rgba(0,0,0,0.2);
+	-webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+	transition: -webkit-transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+	transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+	transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1),-webkit-transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+	width: 17.5em;
+	z-index: 30;
+	margin: auto;
+}
+
+.uploader__empty-state svg {
+	display: block;
+	height: 2.25em;
+	margin: 0 0.625em 0 1.25em;
+	position: absolute;
+	top: 7.125em;
+	-webkit-transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+	transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	width: 2.25em;
+	position: relative;
+	top: 31px;
+	left: -66px;
+}
+
+.uploader__empty-state {
+	/*min-height: 10.3125em;
+	padding-top: 3.75em;*/
+	padding: 20px 20px;
+	margin-left: 67px;
+}
+
+	.uploader__empty-state h2 {
+		font-family: FreightSans Pro Medium, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+	}
+
+	.uploader__empty-state h2 {
+		top: 3.5454545455em;
+	}
+
+	.uploader__empty-state:hover h2, .uploader--form .uploader__empty-state:focus h2, .uploader--form .uploader__empty-state--focused h2, .uploader--form .uploader__empty-state--with-directories-selector h2 {
+		-webkit-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+
+	.uploader__empty-state h2 {
+		display: block;
+		font-size: 1.375em;
+		left: 3em;
+		font-weight: 400;
+		padding: 0;
+		position: absolute;
+		text-align: left;
+		top: 5.4545454545em;
+		-webkit-transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+		transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+
+.uploader h2 {
+	font-weight: 400;
+	font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+	color: #17181a;
+	font-size: 1.375em;
+	line-height: 1.2;
+	margin: 0;
+	padding: 0 0.4545454545em;
+	text-align: center;
+}
+
+.uploader__empty-state .uploader__sub-title {
+	font-family: Fakt Pro Normal, "Fakt Pro Normal Cyr", "Fakt Pro Normal Grk", -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+}
+
+.uploader__empty-state .uploader__sub-title {
+	top: 6.7692307692em;
+}
+
+.uploader__empty-state:hover .uploader__sub-title, .uploader--form .uploader__empty-state:focus .uploader__sub-title, .uploader--form .uploader__empty-state--focused .uploader__sub-title, .uploader--form .uploader__empty-state--with-directories-selector .uploader__sub-title {
+	opacity: 1;
+	-webkit-transform: translateY(50%);
+	transform: translateY(50%);
+}
+
+.uploader__empty-state .uploader__directories-dialog-trigger {
+	background-color: transparent;
+	border: 0;
+	border-bottom: 0.0625em solid #484a4d;
+	color: #484a4d;
+	cursor: pointer;
+	outline: 0;
+}
+
+.uploader__empty-state .uploader__sub-title {
+	color: #6a6d70;
+	font-size: 0.8125em;
+	left: 5.0769230769em;
+	line-height: 1;
+	margin: 0;
+	opacity: 0;
+	padding: 0;
+	position: absolute;
+	font-weight: 400;
+	font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+	top: 10.1538461538em;
+	-webkit-transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+	transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+input[type="file" i] {
+	-webkit-appearance: initial;
+	background-color: initial;
+	cursor: default;
+	align-items: baseline;
+	color: inherit;
+	text-align: start !important;
+	padding: initial;
+	border: initial;
+}
+
+.uploader__empty-state .uploader__directories-dialog-trigger {
+	background-color: transparent;
+	border: 0;
+	border-bottom: 0.0625em solid #484a4d;
+	color: #484a4d;
+	cursor: pointer;
+	outline: 0;
+}
+
+*, *:before, *:after {
+	-webkit-tap-highlight-color: transparent;
+	box-sizing: border-box;
+}
+
+user agent stylesheet
+button {
+	-webkit-appearance: button;
+	-webkit-writing-mode: horizontal-tb !important;
+	text-rendering: auto;
+	color: buttontext;
+	letter-spacing: normal;
+	word-spacing: normal;
+	text-transform: none;
+	text-indent: 0px;
+	text-shadow: none;
+	display: inline-block;
+	text-align: center;
+	align-items: flex-start;
+	cursor: default;
+	background-color: buttonface;
+	box-sizing: border-box;
+	margin: 0em;
+	font: 400 13.3333px Arial;
+	padding: 1px 6px;
+	border-width: 2px;
+	border-style: outset;
+	border-color: buttonface;
+	border-image: initial;
+}
+
+
+.transfer .transfer__contents {
+	font-family: Fakt Pro Normal, "Fakt Pro Normal Cyr", "Fakt Pro Normal Grk", -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+}
+
+.transfer .transfer__contents {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	font-weight: 400;
+	font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+	height: 21.125em;
+	overflow: hidden;
+}
+
+.miGrilla {
+	width: 600px;
+	margin-bottom: 1rem;
+	color: #212529;
+	margin-left: 500px;
+}
+
+.btnImportar {
+	font-size: small;
+	margin-left: 98px;
+	margin-top: -8px;
+}
+
+.paginado-arrows {
+	float: left;
+	height: 80px;
+}
+
+.paginator-info {
+	float: right;
+	height: 20px;
+}
+
+@media (max-width: 700px) {
+	.paginado-arrows {
+		float: none;
+	}
+
+	.paginator-info {
+		float: none;
+	}
+}
+
+.container.body-content {
+	margin: 0;
+}
+
+@media (min-width: 1366px) {
+	.container, .container-sm, .container-md, .container-lg, .container-xl {
+		max-width: 1366px;
+	}
+}
+
+.center-block {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.lblError {
+	margin-left: 562px;
+	color: red;
+	font-size: 15px;
+	background-color: #dcc2c2;
+	font-weight: bold;
+}
+
+.divMensaje {
+	background-color: #dcc2c2;
+}
+
+.isFilled {
+	display: none;
+}
+
+.hayDatosClass {
+	display: block;
+}
+
+.table-informe {
+	width: 600px;
+	margin-bottom: 1rem;
+	color: #212529;
+	text-align: center;
+}
+
+.listaInfo {
+	float: right;
+	margin-top: 70px;
+}
+
+tr .equipo-grilla-info:hover {
+	background-color: #c4c4c4;
+}
+
+.datosGenerales {
+	padding-left: 122px;
+}
+
+.btn-casados-univeritarios {
+	margin-bottom: 10px;
+}
+
+.divCentro {
+	text-align:center;
+}

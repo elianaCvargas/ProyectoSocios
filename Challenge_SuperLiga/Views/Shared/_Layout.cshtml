@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>@ViewBag.Title - My ASP.NET Application</title>
+	@Scripts.Render("~/Scripts/jquery-3.3.1.min.js")
+	@Styles.Render("~/Content/css")
+	@Styles.Render("~/Content/Style/home.css")
+	@Scripts.Render("~/Scripts/Home-index.js")
+	@Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+	<nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
+		<div class="container">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></button>
+			<a class="navbar-brand" href="/">Super Liga</a>
+			<div class="navbar-collapse collapse" id="navbarSupportedContent">
+				<ul class="nav navbar-nav mr-auto">
+					<li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+					@if ((string)ViewData["sessionString"] == "empty")
+					{
+						<li class="nav-item" id="hayDatos" hidden><a href="/Home/InfoEquipo" class="nav-link">Info Equipos</a></li>
+						<li class="nav-item" hidden><a href="/Home/ListadoPersonasCasadasConUniversitarias" class="nav-link">Socios Casados Universitarios</a></li>
+
+
+					}
+					else
+					{
+						<li class="nav-item" id="hayDatos"><a href="/Home/InfoEquipo" class="nav-link">Info Equipos</a></li>
+						<li class="nav-item"><a href="/Home/ListadoPersonasCasadasConUniversitarias" class="nav-link">Socios Casados Universitarios</a></li>
+
+					}
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container body-content">
+		@RenderBody()
+		<footer>
+			<hr />
+			<p>&copy; @DateTime.Now.Year - Super Liga Application</p>
+		</footer>
+	</div>
+
+	@Scripts.Render("~/bundles/jquery")
+	@Scripts.Render("~/bundles/bootstrap")
+	@RenderSection("scripts", required: false)
+</body>
+</html>

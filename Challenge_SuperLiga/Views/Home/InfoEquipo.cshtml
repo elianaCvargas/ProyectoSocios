@@ -1,0 +1,89 @@
+﻿@using Challenge_SuperLiga.Models;
+@model InformeGeneral
+@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+<div class=" col-12">
+	<div class="col-md-6 listaInfo">
+		@foreach (var equipo in Model.InformePorEquipo)
+		{
+			
+			<div class="row">
+				<div class="col-12">
+					<table cellpadding="0" cellspacing="0" id="tblSocios" class="table table-striped table-informe">
+						<tr class="accordion-toggle" data-toggle="collapse" data-target="#collapse1@(equipo.Equipo.Split(' ')[0])">
+							<td align="left" class="equipo-grilla-info">
+								@Html.Raw(equipo.Equipo)
+							</td>
+						</tr>
+						<tr>
+							<td class="accordion-body collapse" id="collapse1@(equipo.Equipo.Split(' ')[0])">
+
+								<table>
+									<tbody>
+										<tr>
+											<td>
+												<strong> Cantidad Socios: </strong>	@Html.Raw(equipo.CantidadSocios)
+											</td>
+											<td>
+												<strong> Promedio Edad: </strong> @Html.Raw(equipo.PromedioEdad)
+											</td>
+											<td>
+												<strong> Menor Edad: </strong>	@Html.Raw(equipo.MenorEdad)
+											</td>
+											<td>
+												<strong> Mayor Edad: </strong> @Html.Raw(equipo.MayorEdad)
+											</td>
+
+										</tr>
+
+									</tbody>
+								</table>
+
+
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		}
+	</div>
+
+	<div class="col-md-6 listaInfo datosGenerales">
+		<div class="row">
+			<h4>Datos Generales</h4>
+		</div>
+		<div>
+			<div>
+				<label><strong>Nombres mas recurrentes de River</strong></label>
+			</div>
+			@foreach (var item in Model.NombresRecurrentesPorEquipo)
+			{
+				<div>
+					<ul>
+						<li>@item</li>
+					</ul>
+				</div>
+			}
+
+		</div>
+		<div>
+			<div>
+				<label><strong>Promedio edad de socios de Racing</strong></label>
+			</div>
+			<div>
+				<label style="text-align:center">@Model.PromedioEdadPorEquipo</label>
+			</div>
+		</div>
+		<div>
+			<div>
+				<label><strong>Total socios registrados</strong></label>
+			</div>
+			<div>
+				<label style="text-align:center">@Model.TotalSocios</label>
+			</div>
+		</div>
+
+	</div>
+</div>

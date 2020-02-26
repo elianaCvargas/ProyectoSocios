@@ -1,0 +1,119 @@
+﻿@using Challenge_SuperLiga.Models;
+@model PaginadorGenerico<Socio>
+@{
+	ViewBag.Title = "Socios";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+	<div class="col-12">
+		<div class="center-block">
+			@{
+				@Html.Partial("_PartialSearchFile");
+			}
+			@if (Model.HayError)
+			{
+				<div class="divMensaje">
+					<label class="lblError">@Model.MensajeError</label>
+				</div>
+			}
+		</div>
+	</div>
+</div>
+
+@if (Model.PaginaActual > 0 && Model.Resultado.Count() > 0)
+{
+	<div class="row">
+		<div class="col-12">
+			<table cellpadding="0" cellspacing="0" id="tblSocios" class="table table-striped">
+				<tr>
+					<th>Nombre</th>
+					<th>Edad</th>
+					<th>Equipo</th>
+					<th>Estado Civil</th>
+					<th>Estudios</th>
+				</tr>
+
+				@foreach (var socio in Model.Resultado)
+				{
+					<tr>
+						<td> @Html.DisplayFor(modelItem => socio.Nombre)</td>
+						<td> @Html.DisplayFor(modelItem => socio.Edad)</td>
+						<td> @Html.DisplayFor(modelItem => socio.Equipo)</td>
+						<td> @Html.DisplayFor(modelItem => socio.EstadoCivil)</td>
+						<td> @Html.DisplayFor(modelItem => socio.Estudios)</td>
+					</tr>
+				}
+			</table>
+		</div>
+	</div>
+
+
+}
+<div class="row paginator">
+	<div class="col-md-6">
+		<div class="paginator-info">
+			@if (Model.Resultado.Count() > 0)
+			{
+
+				<span>
+					<strong>@Model.TotalRegistros</strong> registros encontrados
+				</span>
+				<span>&nbsp;|&nbsp;</span>
+				<span id="asd">
+					Página <strong>@(Model.PaginaActual)</strong> de
+					<strong>@Model.TotalPaginas</strong>
+				</span>
+				<label id="lblPagina" hidden>@Model.PaginaActual</label>
+				<span>&nbsp;|&nbsp;</span>
+
+
+			}
+			else
+			{
+				<span>No hay resultados para esta búsqueda</span>
+				<span>&nbsp;|&nbsp; </span>
+			}
+		</div>
+	</div>
+	<div class="col-md-6 paginado-arrows">
+		@if (Model.PaginaActual > 1)
+		{
+			@Html.ActionLink("<<", "Index", new {  pagina = 1 },
+							new { @class = "btn btn-sm btn-default" })
+			<span></span>
+			@Html.ActionLink("Anterior", "Index", new {  pagina = Model.PaginaActual - 1 },
+							new { @class = "btn btn-sm btn-default" })
+		}
+		else
+		{
+			@Html.ActionLink("<<", "Index", new {  pagina = 1 },
+							new { @class = "btn btn-sm btn-default disabled" })
+			<span></span>
+			@Html.ActionLink("Anterior", "Index", new {  pagina = 1 },
+							new { @class = "btn btn-sm btn-default disabled" })
+		}
+		<span></span>
+		@if (Model.PaginaActual < Model.TotalPaginas)
+		{
+
+			@Html.ActionLink("Siguiente", "Index", new {  pagina = Model.PaginaActual + 1 },
+							new { @class = "btn btn-sm btn-default" })
+			<span></span>
+			@Html.ActionLink(">>", "Index", new {  pagina = Model.TotalPaginas },
+							new { @class = "btn btn-sm btn-default" })
+
+			<span></span>
+		}
+		else
+		{
+			@Html.ActionLink("Siguiente", "Index", new {  pagina = Model.TotalPaginas - 1 },
+							new { @class = "btn btn-sm btn-default disabled" })
+			<span></span>
+			@Html.ActionLink(">>", "Index", new { pagina = Model.TotalPaginas },
+							new { @class = "btn btn-sm btn-default disabled" })
+		}
+	</div>
+
+</div>
+
+
